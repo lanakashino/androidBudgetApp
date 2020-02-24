@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_summary"
+        android:icon="@android:drawable/btn_star"
+        android:title="Summary" />
+
+    <item
+        android:id="@+id/navigation_timeline"
+        android:icon="@android:drawable/btn_star_big_off"
+        android:title="Timeline" />
+
+    <item
+        android:id="@+id/navigation_budget"
+        android:icon="@android:drawable/btn_star_big_on"
+        android:title="Budget" />
+
+    <item
+        android:id="@+id/navigation_other"
+        android:icon="@android:drawable/btn_star_big_on"
+        android:title="Other" />
+
+</menu>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00FFFFFF"
+    tools:context=".CreateNewEntryActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/content_create_new_entry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:tint="#FFFFFF"
+        app:backgroundTint="#D7797B81"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="#00FFFFFF"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <TextView
+        android:id="@+id/dollar_text"
+        android:layout_width="24dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:text="@string/dollar"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/amount_input"
+        app:layout_constraintStart_toEndOf="@+id/expense_toggle_button"
+        app:layout_constraintTop_toTopOf="@+id/amount_input" />
+
+    <ImageView
+        android:id="@+id/note_Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:contentDescription="@string/note_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/note_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/note_input"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
+
+    <ImageView
+        android:id="@+id/category_Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:background="#007C7979"
+        android:contentDescription="@string/category_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/category_spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/category_spinner"
+        app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/note_input"
+        android:layout_width="238dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toEndOf="@+id/note_Icon"
+        app:layout_constraintTop_toBottomOf="@+id/category_spinner">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/note_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/note_input_base" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ToggleButton
+        android:id="@+id/expense_toggle_button"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:textOff="@string/expense"
+        android:textOn="@string/incoome"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/amount_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/amount_input" />
+
+    <ImageView
+        android:id="@+id/date_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:contentDescription="@string/date_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/date_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/date_input"
+        app:srcCompat="@android:drawable/ic_menu_today" />
+
+    <Spinner
+        android:id="@+id/category_spinner"
+        android:layout_width="238dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toEndOf="@+id/category_Icon"
+        app:layout_constraintTop_toBottomOf="@+id/date_input" />
+
+    <TextView
+        android:id="@+id/date_input"
+        android:layout_width="238dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center_vertical"
+        android:text="@string/date_input_default"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/date_icon"
+        app:layout_constraintTop_toBottomOf="@+id/amount_input" />
+
+    <EditText
+        android:id="@+id/amount_input"
+        android:layout_width="245dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="@string/amount_input_base"
+        android:inputType="number"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/dollar_text"
+        app:layout_constraintTop_toTopOf="@+id/include" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

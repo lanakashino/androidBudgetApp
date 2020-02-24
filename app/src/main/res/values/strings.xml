@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">BudgetApp_ver0</string>
+    <string name="edit_message">Enter a message</string>
+    <string name="button_send">Send</string>
+    <string name="add_button">Add a new entry</string>
+    <string name="title_activity_create_new_entry">CreateNewEntryActivity</string>
+    <string name="expense">Expense</string>
+    <string name="incoome">Income</string>
+    <string name="dollar">$ </string>
+    <string name="amount_input_base">0</string>
+    <string name="note_input_base">Write a note</string>
+    <string name="note_icon">Icon for note input</string>
+    <string name="category_icon">Icon for category input</string>
+    <string name="date_icon">Icon for a date input</string>
+    <string name="date_input_default">Today</string>
+</resources>
